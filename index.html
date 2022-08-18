@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <script type="text/javascript" src="index.js"></script>
+    <title>Difrador & Decifrador </title>
+</head>
+<body>
+    <input type="text" id="textOld">
+    <textarea type="result" id="textNew" rows="10" cols="30"></textarea>
+    <button type="button" id="buttonCipher">Encriptar</button>
+    <button type="button" id="buttonDecipher">Desencriptar</button>
+    <button type="button" style="display:none" id="buttonCoppy">Copiar</button>
+</body>
+<script>
+    var buttonCipher=document.querySelector("#buttonCipher");
+    buttonCipher.onclick=Cipher;
+    var buttonDecipher=document.querySelector("#buttonDecipher");
+    buttonDecipher.onclick=Decipher;
+    var buttonCop=document.querySelector("#buttonCoppy");
+    buttonCop.onclick=Copy;
+</script>
+</html>
