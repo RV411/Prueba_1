@@ -4,23 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
-    <script type="text/javascript" src="index.js"></script>
-    <title>Difrador & Decifrador </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <title>Cifrador & Decifrador </title>
 </head>
 <body>
-    <input type="text" id="textOld">
-    <textarea type="result" id="textNew" rows="10" cols="30"></textarea>
-    <button type="button" id="buttonCipher">Encriptar</button>
-    <button type="button" id="buttonDecipher">Desencriptar</button>
-    <button type="button" style="display:none" id="buttonCoppy">Copiar</button>
+    <header>
+        <div class="contenedor">
+            <img class="logo" src="./images/logo.svg" alt="Alura">
+        </div>
+        
+    </header>
+    <main>
+        <!-- contenedor general -->
+        <div class="contenedor">
+            <div class="encriptador">
+                <!-- parte del texto -->
+                <form class="encriptador_form">
+                    <div class="texto_en_area">
+                        <textarea name="text" id="textOld" placeholder="Ingrese el texto aqui"></textarea>
+
+                        <div class="btn">
+                            <button class="btn_encriptar" type="button" id="buttonCipher">Encriptar</button>
+                            <button class="btn_desencriptar" type="button" id="buttonDecipher">Desencriptar</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- parte del resultado -->
+                <div class="resultado">
+                    <div class="contenedor_resultado">
+                        <div class="contenido_no_resuelto" id="noResuelto">
+                            <div class="imagen_resultado">
+                                <img src="./images/not_found.png" alt="contenido_no_resuelto">
+                            </div>
+                            <p>Ningún mensaje encontrado</p>
+                            <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+                        </div>
+
+                        <div class="contenido_resuelto" id = "resuelto">
+                            <textarea type="result" id="textNew" disabled></textarea>
+                            <button type="button"  id="buttonCoppy">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright">© Creado por <a href="https://github.com/RV411/Prueba_1" target="_blank" rel="noopener noreferrer">Adan Rodriguez</a></p>
+    </footer>
+    <script type="text/javascript" src="./index.js"></script>
+
 </body>
-<script>
-    var buttonCipher=document.querySelector("#buttonCipher");
-    buttonCipher.onclick=Cipher;
-    var buttonDecipher=document.querySelector("#buttonDecipher");
-    buttonDecipher.onclick=Decipher;
-    var buttonCop=document.querySelector("#buttonCoppy");
-    buttonCop.onclick=Copy;
-</script>
 </html>
